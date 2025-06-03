@@ -1,5 +1,3 @@
-import type { JSX } from 'react'
-
 import arkh10 from './assets/arkh-michael-1.0.jpg'
 import arkh11 from './assets/arkh-michael-1.1.png'
 import arkh12 from './assets/arkh-michael-1.2.png'
@@ -15,9 +13,9 @@ import boyan11 from './assets/boyan-dock-1.1.png'
 import boyan12 from './assets/boyan-dock-1.2.png'
 
 import red10 from './assets/red-dock-1.0.png'
-import red20 from './assets/red-dock-1.0.png'
-import red21 from './assets/red-dock-1.0.png'
-import red22 from './assets/red-dock-1.0.png'
+import red20 from './assets/red-dock-2.0.png'
+import red21 from './assets/red-dock-2.1.png'
+import red22 from './assets/red-dock-2.2.png'
 
 import yard10 from './assets/guest-yard-1.0.png'
 import yard11 from './assets/guest-yard-1.1.png'
@@ -42,18 +40,7 @@ import zhd10 from './assets/zhd-1.0.png'
 import zhd11 from './assets/zhd-1.1.jpg'
 import zhd20 from './assets/zhd-2.0.png'
 
-export interface ContentEntryImage {
-    source: string,
-    description: string
-}
-
-export interface ContentEntry {
-    title: string,
-    images: string[]
-    content: string | JSX.Element,
-}
-
-export const entries: ContentEntry[] = [
+export default [
     {
         title: 'Собор Архангела Михаила',
         images: [arkh10, arkh11, arkh12, arkh20],
@@ -309,4 +296,4 @@ export const entries: ContentEntry[] = [
             связывающим город с Москвой, Санкт-Петербургом и другими регионами страны.
         </>
     }
-]
+];
