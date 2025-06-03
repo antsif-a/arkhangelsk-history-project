@@ -9,7 +9,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <div>
       <h1>Прогулка по старому Архангельску</h1>
-      {EntryList.map(Entry)}
+      {EntryList.map((entry, i) => <Entry {...entry} key={i}/>)}
     </div>
   </StrictMode>,
 )
