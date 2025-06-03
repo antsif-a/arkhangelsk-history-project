@@ -5,7 +5,7 @@ export default function Slider({ children }: { children: ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const slides = Children.toArray(children) as ReactElement[];
+  const slides = Children.toArray(children) as ReactElement<{ children: ReactNode }>[];
 
   // Update activeIndex on scroll
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Slider({ children }: { children: ReactNode }) {
   // Extract <img src=...> from children
   const getImageFromChild = (child: ReactElement<{ children: ReactNode }>) => {
     const img = Children.toArray(child.props.children).find(
-      (node) => node.type == "img"
+      (node) => (node as ReactElement).type == "img"
     ) as React.ReactElement<HTMLImageElement>;
     return img.props.src;
   };
